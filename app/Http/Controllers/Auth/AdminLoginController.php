@@ -15,10 +15,7 @@ class AdminLoginController extends Controller{
 	}
 	function login(Request $request){
 	// Validate the form data
-		$this->validate($request, [
-			'email' => 'required|email',
-			'password' => 'required|min:6',
-	]);
+		$this->validate($request, ['email' => 'required|email','password' => 'required|min:6',]);
 	// Attempt to log the user in
 	if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
 	// If successful, then redirect to their intended location
