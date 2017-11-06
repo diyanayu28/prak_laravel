@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('sidebar_menu')
+	<li class="active"><a href="coba2"><i class="fa fa-comment"></i> <span>Coba 2</span></a></li>
 @section('content_header')
 
 <h1>
